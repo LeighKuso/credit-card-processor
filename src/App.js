@@ -9,12 +9,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
 // Custom Components
-import CardForm from './components/validate-card-form';
-import SavedCards from './components/saved-cards';
-import BannedCountriesForm from './components/banned-countries-form';
 import FormsDialog from './components/forms-dialog';
 import useLocalStorage from './utils/useLocalStorage';
-import BannedCountriesList from './components/banned-countries-list';
+import BannedCountriesForm from './components/Forms/banned-countries-form';
+import CardForm from './components/validate-card-form';
+import SavedCards from './components/Lists/saved-cards-list';
+import BannedCountriesList from './components/Lists/banned-countries-list';
 
 function App() {
   const [dialogProps, setDialogProps] = useState({
