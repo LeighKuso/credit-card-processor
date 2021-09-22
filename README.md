@@ -29,3 +29,6 @@ npm start
 - [react-credit-cards](https://www.npmjs.com/package/react-credit-cards)
 - [card-validator](https://www.npmjs.com/package/card-validator)
 - [react-select-country-list](https://www.npmjs.com/package/react-select-country-list)
+
+## Valid Card Numbers
+https://developer.paypal.com/braintree/docs/reference/general/testing/ruby#valid-card-numbers
