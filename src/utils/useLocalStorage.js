@@ -9,9 +9,6 @@ export default function useLocalStorage(key, initialValue) {
     useEffect(() => {
         // storing input name
         localStorage.setItem(key, JSON.stringify(value));
-        return () => {
-            localStorage.clear();
-        }
     }, [key, value]);
 
     return [value, setValue];

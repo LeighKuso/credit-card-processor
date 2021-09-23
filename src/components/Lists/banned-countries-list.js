@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Chip from '@material-ui/core/Chip';
 
 export default function BannedCountriesList({countries}) {
-    const [countriesList, setCountriesList] = useState(countries || []);
+    const [countriesList, setCountriesList] = useState(countries);
 
     useEffect(() => {
         setCountriesList(countries);

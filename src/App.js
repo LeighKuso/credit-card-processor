@@ -12,7 +12,7 @@ import AddBoxIcon from '@material-ui/icons/AddBox';
 import FormsDialog from './components/forms-dialog';
 import useLocalStorage from './utils/useLocalStorage';
 import BannedCountriesForm from './components/Forms/banned-countries-form';
-import CardForm from './components/validate-card-form';
+import CardForm from './components/Forms/validate-card-form';
 import SavedCards from './components/Lists/saved-cards-list';
 import BannedCountriesList from './components/Lists/banned-countries-list';
 
@@ -60,6 +60,7 @@ function App() {
   }
   return (
     <div className="app-root">
+
       <AppBar className="app-header" >
         <Toolbar className='app-title'  >
           <h1>Rank Interactive Assignment</h1>

@@ -9,7 +9,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 // Custom Imports
-import validateInfo from '../utils/validateInfo';
+import validateInfo from '../../utils/validateInfo';
 
 export default function CardForm({ savedCards, handleSave }) {
     const [values, setValues] = useState({
