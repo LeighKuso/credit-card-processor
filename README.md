@@ -18,7 +18,7 @@ npm start
 3. Click submit to save selected countries
 
 ### To validate Cards
-1. Click the + button next to "## Validated Cards" title
+1. Click the + button next to "Validated Cards" title
 2. Enter the Card details
 3. Click Submit to have the card validated and saved
 
@@ -31,4 +31,7 @@ npm start
 - [react-select-country-list](https://www.npmjs.com/package/react-select-country-list)
 
 ## Valid Card Numbers
+
+For a list of valid cards
+
 https://developer.paypal.com/braintree/docs/reference/general/testing/ruby#valid-card-numbers
