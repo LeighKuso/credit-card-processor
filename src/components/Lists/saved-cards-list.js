@@ -17,13 +17,13 @@ export default function SavedCards(props) {
     return (
         <div className='saved-cards-list'>
             {cards.map(card => (
-                <div className='saved-card'> 
-                <Card
-                    number={card.cardNumber}
-                    name={card.cardName}
-                    expiry={card.cardExpiry}
-                    cvc={card.cardCVC}
-                />
+                <div key={card.cardNumber} className='saved-card'>
+                    <Card
+                        number={card.cardNumber}
+                        name={card.cardName}
+                        expiry={card.cardExpiry}
+                        cvc={card.cardCVC}
+                    />
                 </div>
             ))}
         </div>

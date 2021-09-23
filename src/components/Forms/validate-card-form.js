@@ -28,7 +28,8 @@ export default function CardForm({ savedCards, handleSave }) {
         setValues({
             ...values,
             [name]: value
-        })
+        });
+        return;
     }
 
     const handleFocus = e => {
@@ -36,20 +37,20 @@ export default function CardForm({ savedCards, handleSave }) {
             ...values,
             focus: e.target.id
         });
+        return;
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         //Run card validation
-        console.log('Running Form validation');
         const _errors = await validateInfo(values);
-        console.log(_errors);
 
         if (_errors.status !== 'success') {
             // display errors
             setErrors(_errors);
+            return;
         } else {
-            // update details if Valid
+            // update details if Valid and card is not saved
             if (savedCards[values.cardNumber]) {
                 setErrors({
                     status: 'error',
@@ -57,8 +58,8 @@ export default function CardForm({ savedCards, handleSave }) {
                 });
                 return;
             }
-            handleSave({ ...savedCards, [values.cardNumber]: values });
             setErrors({});
+            handleSave({ ...savedCards, [values.cardNumber]: values });
         }
     }
 
@@ -78,7 +79,7 @@ export default function CardForm({ savedCards, handleSave }) {
                         <InputLabel id='country-select'>Select Country</InputLabel>
                         <Select
                             name='cardCountry'
-                            labelId='country-select'
+                            labelid='country-select'
                             value={values.cardCountry}
                             onChange={handleChange}
                             required >
@@ -97,7 +98,7 @@ export default function CardForm({ savedCards, handleSave }) {
                             id='name'
                             type='text'
                             name='cardName'
-                            labelId='cardName-input'
+                            labelid='cardName-input'
                             value={values.cardName}
                             onChange={handleChange}
                             onFocus={handleFocus}
@@ -111,7 +112,7 @@ export default function CardForm({ savedCards, handleSave }) {
                             id='number'
                             type='tel'
                             name='cardNumber'
-                            labelId='cardNumber-input'
+                            labelid='cardNumber-input'
                             value={values.cardNumber}
                             onChange={handleChange}
                             onFocus={handleFocus}
@@ -125,7 +126,7 @@ export default function CardForm({ savedCards, handleSave }) {
                             id='expiry'
                             type='tel'
                             name='cardExpiry'
-                            labelId='cardExpiry-input'
+                            labelid='cardExpiry-input'
                             value={values.cardExpiry}
                             onChange={handleChange}
                             onFocus={handleFocus}
@@ -139,7 +140,7 @@ export default function CardForm({ savedCards, handleSave }) {
                             id='cvc'
                             type='tel'
                             name='cardCVC'
-                            labelId='cardCVC-input'
+                            labelid='cardCVC-input'
                             value={values.cardCVC}
                             onChange={handleChange}
                             onFocus={handleFocus}
